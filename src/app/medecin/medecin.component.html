@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+    <div *ngIf="!login" class="wrapper-form">
+        <h2 class="form-title"><span class="warning-emoji">⚠️</span> Remplissez ce formulaire uniquement si vous êtes médecin</h2>
+        <div class="group-input">
+            <label for="Nom">Nom <span class="required">*</span></label>
+            <input type="text" id="Nom" name="Nom" placeholder="Ex : Ben Salah" [(ngModel)]="profileData.lastName" required>
+        </div>
+        <div class="group-input">
+            <label for="Prenom">Prénom <span class="required">*</span></label>
+            <input type="text" id="Prenom" name="Prenom" placeholder="Ex : Ahmed" [(ngModel)]="profileData.firstName" required>
+        </div>
+        <div class="group-input">
+            <label for="email">Adresse email <span class="required">*</span></label>
+            <input type="text" id="email" name="email" placeholder="Ex : ahmed.bensalah@exemple.com" [(ngModel)]="userData.email" required>
+        </div>
+        <div class="group-input">
+            <label for="password">Mot de passe <span class="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="••••••••" [(ngModel)]="userData.password" required>
+        </div>
+        <div class="group-input">
+            <label for="address">Adresse <span class="required">*</span></label>
+            <input type="text" id="address" name="address" placeholder="Ex : 15 Rue de la Liberté, Tunis 1002" [(ngModel)]="profileData.address" required>
+        </div>
+        <div class="group-input">
+            <label for="Tel">Numéro de téléphone <span class="required">*</span></label>
+            <input type="text" id="Tel" name="Tel" placeholder="Ex : +216 21 234 567" [(ngModel)]="profileData.phone" required>
+        </div>
+        <div class="group-input">
+            <label for="speciality">Spécialité <span class="required">*</span></label>
+            <select id="speciality" name="speciality" [(ngModel)]="profileData.speciality" (change)="checkSpeciality()" required>
+                <option value="" disabled selected>Sélectionnez une spécialité</option>
+                <option *ngFor="let speciality of specialities" [value]="speciality">{{speciality}}</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+        <div *ngIf="profileData.speciality === 'autre'" class="group-input">
+            <label for="autreSpeciality">Autre spécialité <span class="required">*</span></label>
+            <input type="text" id="autreSpeciality" name="autreSpeciality" placeholder="Veuillez entrer la spécialité" [(ngModel)]="profileData.customSpeciality" required>
+        </div>
+        <button [disabled]="loading" (click)="registerUserAndProfile()">
+            <div *ngIf="loading" role="status" aria-label="loading">
+                <span>Loading...</span>
+            </div>
+            <p *ngIf="!loading">{{btnDynamicName}}</p>
+        </button>
+    </div>
+</div>
+
+
+
+
+       <!-- <span class="flex gap-2">Vous avez un compte?
+            <p (click)="loginPage()">S'identifier</p>
+        </span>
+    </div>
+    <div *ngIf="login" class="wrapper-form">
+    <div class="group-input">
+        <input type="text" name="email" placeholder="Adresse e-mail" [(ngModel)]="dsLogin.email">
+    </div>
+    <div class="group-input">
+        <input type="password" name="password" placeholder="Mot de passe" [(ngModel)]="dsLogin.password">
+    </div>
+
+    <span class="flex gap-2">Vous n'avez pas de compte?
+        <p (click)="inscriptionPage()">Créer un compte</p>
+    </span>
+</div>-->

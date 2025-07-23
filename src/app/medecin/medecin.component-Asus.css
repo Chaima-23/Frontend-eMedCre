@@ -1,0 +1,166 @@
+/* Style global du formulaire */
+.form-title {
+  text-align: center; /* Centrer le titre */
+  font-size: 15px; /* Taille de police */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px; /* Espace en bas du titre */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end; /* Place le contenu à droite */
+  align-items: flex-start; /* Ajuste l'alignement vertical */
+  height: 50%;
+  padding-right: 50px; /* Ajuste l'espacement à droite */
+  position: relative; /* Assure un bon positionnement pour les éléments internes */
+}
+.inner-wrapper {
+  margin-top: 1px;
+  background: rgba(255, 255, 255, 0.5); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Effet de flou */
+  padding: 20px;
+  border-radius: 10px; /* Bords arrondis pour un effet plus doux */
+  max-width: 1200px; /* Largeur maximale */
+  width: 50%; /* 50% de la largeur de `.wrapper` */
+  position: absolute; /* Positionnement absolu dans `.wrapper` */
+  top: 20px; /* Ajuste la position verticale si nécessaire */
+  left: 100px; /* Déplace l'élément un peu vers la gauche, ajuster cette valeur selon le besoin */
+}
+
+p {
+  color:#11325b;
+  font-size: 20px;
+}
+h1{
+  color:darkcyan;
+}
+ul {
+  list-style-type: none; /* Enlève les puces par défaut */
+  padding-left: 0; /* Enlève le padding par défaut */
+  margin-bottom: 20px;
+}
+
+ul li {
+  font-size: 18px;
+  color: #11325b; /* Couleur des éléments de la liste */
+  margin-bottom: 10px;
+  padding-left: 40px; /* Décalage à gauche pour les éléments, augmenter pour plus de décalage */
+  font-weight: bold; /* Met les éléments de la liste en gras */
+  position: relative;
+}
+
+/* Ajout de puces personnalisées */
+ul li::before {
+  content: '✔'; /* Puce personnalisée */
+  color: darkcyan; /* Couleur de la puce */
+  position: absolute;
+  left: 5px; /* Déplace la puce un peu plus vers la droite */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+
+
+.wrapper-form {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-top: 20px; 
+}
+
+.group-input {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-input label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: darkcyan;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
+.group-input input,
+.group-input select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.group-input input:focus,
+.group-input select:focus {
+  border-color:darkcyan;
+}
+
+.group-input input::placeholder {
+  color: #999;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color:darkcyan;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color:rgb(43, 54, 54);
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button p {
+  margin: 0;
+}
+
+button div[role="status"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button div span {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color:#11325b;
+}
+
+/* Ajout de l'indication pour les champs obligatoires */
+.group-input input:required,
+.group-input select:required {
+  border-left: 3px solid #e29578;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .wrapper-form {
+      width: 90%;
+  }
+}

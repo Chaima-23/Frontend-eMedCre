@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .left {
+    flex: 1;
+  }
+  h1 {
+    font-size: 70px; /* Agrandir le titre */
+    color: #2c3e50; /* Changer la couleur du titre */
+    font-weight: bold;
+    margin-bottom: 20px; /* Ajouter un espace en dessous du titre */
+    text-align: center;
+    margin-top: 10px; /* Ajuster la distance sous la navbar */
+  }
+  p{
+    font-size: 15px; /* Agrandir le titre */
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none; /* Enlève les puces par défaut */
+    padding-left: 40px; /* Déplace la liste vers la droite */
+    margin-bottom: 20px;
+  }
+  
+  ul li {
+    font-size: 18px;
+    color: #11325b; /* Couleur des éléments de la liste */
+    margin-bottom: 10px;
+    padding-left: 40px; /* Décalage à gauche pour les éléments */
+    font-weight: bold; /* Met les éléments de la liste en gras */
+    position: relative;
+  }
+  
+  /* Ajout de puces personnalisées */
+  ul li::before {
+    content: '✔'; /* Puce personnalisée */
+    color: darkcyan; /* Couleur de la puce */
+    position: absolute;
+    left: 5px; /* Déplace la puce un peu plus vers la droite */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  
+  .right img {
+    width: 600px; /* Agrandir l'image */
+    height: auto;
+    border-radius: 15px; /* Arrondir les coins */
+    margin-top: 20px;
+  }
+  /* Container de la bande */
+.bande {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50; /* Couleur de fond */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px;
+    margin-top: 40px; /* Espacement entre la bande et les autres éléments */
+    color: white;
+  }
+  
+  .bande-left img {
+    width: 80px; /* Taille de l'image */
+    height: auto;
+    border-radius: 50%; /* Image ronde */
+  }
+  
+  .bande-right {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .bande-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .btn-discover {
+    background-color: #16a085; /* Couleur du bouton */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px; /* Coins arrondis du bouton */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-discover:hover {
+    background-color: #1abc9c; /* Couleur du bouton au survol */
+  }
+  

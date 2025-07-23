@@ -1,0 +1,148 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const heroTitle = document.querySelector('.hero h1');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Réinitialiser l'animation en ajoutant et retirant la classe animate
+                    entry.target.classList.add('animate');
+
+                    // Réinitialiser l'animation en retirant la classe après l'animation
+                    entry.target.addEventListener('animationend', () => {
+                        entry.target.classList.remove('animate');
+                    }, { once: true });
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        observer.observe(heroTitle);
+    });
+</script>
+<div class="content-container">
+    <section class="hero">
+        <h1>Bienvenue sur eMedCare</h1>
+        <p>Votre santé, notre priorité. Découvrez nos services et prenez rendez-vous en ligne.</p>
+        <button class="cta-button">Connexion</button>
+    </section>
+
+    <section class="definition">
+        <div class="def-item">
+            <h3>Pourquoi eMedCare ?</h3>
+            <p class="description">
+                Le nom <b> "eMedCare"</b> incarne notre engagement envers l'innovation et l'excellence dans le domaine
+                des soins
+                de santé numériques.
+                <b>"eMed" </b>symbolise la combinaison de l'expertise médicale et des technologies numériques, tandis
+                que
+                <b>"Care" </b>reflète notre mission fondamentale
+                : offrir des soins de santé de qualité, accessibles et personnalisés à chaque individu.
+                La qualité médicale est au cœur de l'ADN de eMedCare, guidant chaque aspect de notre approche.eMedCare
+                vise à transformer
+                l'expérience des soins médicaux en ligne, en facilitant l'accès aux soins, en améliorant la
+                communication entre les patients
+                et les professionnels de la santé, et en optimisant la gestion des consultations. Nous croyons fermement
+                que la technologie peut
+                rendre les soins de santé plus efficaces, sécurisés et empathiques, et<b> "eMedCare"</b> est notre
+                réponse à ce
+                besoin croissant de solutions innovantes en santé.
+            </p>
+        </div>
+        <div class="slider-frame">
+            <div class="img-container">
+                <img src="../../assets/img1.png" class="rounded-md w-100 h-100 object-fit-cover tran4s scrolling-image">
+            </div>
+        </div>
+    </section>
+    <section class="teleconsultation-benefits">
+        <h2>Découvrez les avantages de la téléconsultation !</h2>
+        <p>Pour en savoir plus, cliquez sur le bouton ci-dessous.</p>
+        <button class="learn-more-button">En savoir plus sur la téléconsultation</button>
+    </section>
+    <section class="engagements">
+        <h2 class="css-xlhg40">Nos engagements qualité</h2>
+        <div class="grid-container">
+            <div class="icon-box">
+                <img src="../../assets/icons/icone1.png" alt="Formation" class="icon">
+                <h3>Formation</h3>
+                <p>100% des médecins sont formés à la téléconsultation par eMedCare.</p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone2.png" alt="Ecoute" class="icon">
+                <h3>Ecoute</h3>
+                <p>Les médecins prennet le temps nécessaire pour chaque patient et s'adaptent à votre situation.</p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone3.png" alt="Suivi" class="icon">
+                <h3>Suivi</h3>
+                <p>Vous bénéficiez d'un suivi après vos téléconsultations, vous pouvez facilement reprendre RDV avec votre médecin.
+                </p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone4.png" alt="Confiance" class="icon">
+                <h3>Confiance</h3>
+                <p>Avec notre site, vous pouvez consulter des experts médicaux de manière simple, sûre et efficace.
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="fonctionnement">
+        <h2 class="css-xlhg40">Comment fonctionne une téléconsultation avec eMedCare</h2>
+        <div class="grid-container">
+            <div class="icon-box">
+                <img src="../../assets/icons/icone5.png" alt="RDV" class="icon">
+                <h3>Prenez rendez-vous en ligne</h3>
+                <p>Recherchez une spécialité puis choisissez le médecin et l'horaire
+                    qui vous conviennent.
+                </p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone6.png" alt="Téléconsultation" class="icon">
+                <h3>Effectez votre téléconsultation</h3>
+                <p>Décrivez vos symptômes à un médecin formé à la téléconsultation,
+                    en toute confidentialité depuis votre ordinateur.</p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone7.png" alt="Avis" class="icon">
+                <h3>Suivi</h3>
+                <p>Bénéficiez d'un avis médical, d’un diagnostic 
+                    et de documents médicaux valables en pharmacie, accessibles en ligne.
+                </p>
+            </div>
+            <div class="icon-box">
+                <img src="../../assets/icons/icone8.png" alt="Payer" class="icon">
+                <h3>Recevez votre compte rendu médical</h3>
+                <p>Une fois la téléconsultation terminée, vous recevrez un compte rendu médical détaillé incluant les diagnostics, les prescriptions et les recommandations.
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="communaute">
+        <h2>Communauté médicale eMedCare</h2>
+        <div class="communaute-container">
+            <div class="image-box">
+                <img src="../../assets/img4.png" alt="Communauté médicale" class="image-left">
+            </div>
+            <div class="text-box">
+                <h3>Des médecins qualifiés à votre écoute</h3>
+                <p>eMedCare rassemble une communauté de médecins expérimentés et spécialisés dans divers domaines. Chaque praticien est formé à la téléconsultation et disponible pour vous offrir des conseils médicaux adaptés, des diagnostics précis et des prescriptions en ligne valables dans toutes les pharmacies partenaires.</p>
+                <br>
+                <p>Plusieurs spécialités sont représentées : médecine générale, psychiatrie,...</p>
+                <br>
+                <p>La téléconsultation médicale est un service complémentaire et ne se substitue pas à la médecine en présentiel.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contacter">
+        <h2>Bessoin d'aide? </h2>
+        <p>Notre service client est à votre écoute <b>7j/7, de 9h à 23h.</b></p>
+        <p>Le temps d’attente moyen pour pouvoir discuter avec un de nos conseillers est de quelques minutes.</p>
+        <button class="btn-connecter">Nous contacter</button>
+    </section>
+</div>

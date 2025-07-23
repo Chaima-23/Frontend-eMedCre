@@ -1,0 +1,384 @@
+/* Conteneur principal pour le contenu */
+.content-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Section Hero */
+.hero {
+    background-color: #35b8cf; 
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* Animation slide-in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* État initial de l'élément */
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    opacity: 0; 
+    transform: translateY(-50px); 
+    animation: slideIn 1.5s ease-out infinite; 
+}
+
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #0b1a2e;
+    font-family: unsetRoobert, sans-serif;
+}
+
+.cta-button {
+    background-color: #11325b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0b1a2e;
+}
+/* Styles pour le texte à gauche */
+.definition {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.text-container {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+.definition .def-item h3 {
+    font-size: 2em;
+    color: #11325b;
+    margin: 0;
+    font-family: 'Roobert', sans-serif;
+}
+/* Style pour le paragraphe .description */
+.description {
+
+    padding: 10px; 
+    color: #11325b; 
+    display: block;
+    font-size: 20px; 
+    line-height: 1.5;
+    border-radius: 5px; 
+    font-family: 'Arial', sans-serif; 
+    margin: 0 auto; 
+    text-align: justify; 
+    max-width: 800px; 
+
+    /* Initial state for the animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 1s ease-out forwards; 
+}
+
+/* Define the appear animation */
+@keyframes appear {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+/* Ajustement pour que l'image remplisse son conteneur sans être déformée */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Bordures arrondies */
+.rounded-md {
+    border-radius: var(--border-radius-md); 
+}
+
+/* Effet de transition douce */
+.tran4s {
+    transition: all .4s ease-in-out;
+}
+
+/* Taille de l'image */
+.h-100 {
+    height: 100% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+/* Conteneur de l'image */
+.img-container {
+    width: 500px;  
+    height: 500px; 
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+/* Animation de défilement horizontal aller-retour */
+.scrolling-image {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: 120%; 
+    height: 120%; 
+    animation: scroll-left-right 10s linear infinite;
+}
+
+@keyframes scroll-left-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.teleconsultation-benefits {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #f7ede2;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 20px; 
+}
+
+.teleconsultation-benefits h2{
+ 
+    margin-bottom: 10px;
+    color: #0b1a2e;
+}
+.teleconsultation-benefits p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #0b1a2e;
+    font-family: unsetRoobert, sans-serif;
+}
+
+.learn-more-button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color:#35b8cf;
+}
+
+.learn-more-button:hover {
+    background-color:#006d77;
+}
+
+.css-xlhg40 {
+    color:#343a40;
+    font-family: Roobert, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 900;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+.engagements {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.icon-box {
+    text-align: center;
+}
+
+.icon {
+    width: 60px; 
+    height: 60px;
+    margin-bottom: 10px;
+  
+    
+}
+
+h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color:#006d77;
+    font-family: Roobert, sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #343a40;
+    font-family: unsetRoobert, sans-serif;
+}
+
+
+.fonctionnement h3{
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color:#e29578;
+    font-family: Roobert, sans-serif;
+    font-size: 20px;
+}
+.communaute-container {
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+}
+.communaute{
+    background-color: #fff; 
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+.communaute h2{
+    color:#e29578;
+    font-family: Roobert, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 900;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+
+.image-left {
+    max-width: 80%;
+    height: auto;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    padding-right: 50px;
+}
+
+.communaute-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.communaute .communaute-container .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.communaute .communaute-container .text-box h3 {
+    font-size: 2em;
+    color: #11325b;
+    margin: 0 0 10px 0;
+    font-family: 'Roobert', sans-serif;
+}
+
+.communaute .communaute-container .text-box p {
+    padding: 10px;
+    color: #11325b;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0;
+}
+.contacter {
+    position: relative;
+    background: url('../../assets/img5.webp');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.contacter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+.contacter h2,
+.contacter p,
+.contacter .btn-connecter {
+    position: relative;
+    z-index: 2; 
+}
+.contacter h2 {
+    color: #343a40;
+    font-family: Roobert, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    text-align: center;
+    margin-bottom: 0; 
+}
+
+.contacter p {
+    text-align: center;
+}
+
+
+.btn-connecter {
+    border: none;
+    background-color: transparent;
+    color:#1a6fb0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: underline;
+    display: block;
+    margin: 0 auto; 
+}
+
+.btn-connecter:hover {
+    color:#35b8cf;
+}
+

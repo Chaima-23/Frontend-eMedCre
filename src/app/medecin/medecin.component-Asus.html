@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<div class="wrapper" >
+    <div class="inner-wrapper">
+        <h1>eMedCare recrute des médecins : rejoignez-nous !</h1>
+        <p>
+            Créée en 2024, eMedCare est aujourd’hui la solution de téléconsultation référente en Tunisie.
+        </p>
+        
+        <p>
+            Nous recrutons des professionnels de santé : vous réfléchissez à compléter votre activité présentielle avec la téléconsultation ?
+        </p>
+        
+        <p>
+            Un emploi de médecin chez eMedCare, c'est :
+        </p>
+        
+        <ul>
+            <li>Une flexibilité totale chaque semaine sur le choix de vos créneaux de téléconsultation</li>
+            <li>Un contrat adapté à chaque statut et spécialité</li>
+            <li>Un complément de rémunération immédiat et significatif</li>
+            <li>Un accompagnement et une formation continus de l'équipe médicale</li>
+        </ul>
+        
+        <p>
+            Remplissez ce formulaire, nous vous contactons dans les plus brefs délais.
+        </p>
+        
+        <p>
+            La mission de eMedCare est de faciliter l’accès aux soins et de permettre à tous de recevoir des soins de qualité dans un délai compatible avec leur état de santé.
+        </p>
+        
+        <p>
+            eMedCare, une équipe de médecins engagés pour une pratique moderne et utile aux patients.
+        </p>
+        
+      </div>
+    <div *ngIf="!login" class="wrapper-form">
+        <h2 class="form-title"><span class="warning-emoji">⚠️</span> Remplissez ce formulaire uniquement si vous êtes
+            médecin</h2>
+        <div class="group-input">
+            <label for="Nom">Nom <span class="required">*</span></label>
+            <input type="text" id="Nom" name="Nom" placeholder="Nom" [(ngModel)]="profileData.lastName" required>
+        </div>
+        <div class="group-input">
+            <label for="Prenom">Prénom <span class="required">*</span></label>
+            <input type="text" id="Prenom" name="Prenom" placeholder="Prénom" [(ngModel)]="profileData.firstName"
+                required>
+        </div>
+        <div class="group-input">
+            <label for="email">Adresse email <span class="required">*</span></label>
+            <input type="text" id="email" name="email" placeholder="Email" [(ngModel)]="userData.email" required>
+        </div>
+        <div class="group-input">
+            <label for="password">Mot de passe <span class="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="••••••••" [(ngModel)]="userData.password"
+                required>
+        </div>
+        <div class="group-input">
+            <label for="address">Adresse <span class="required">*</span></label>
+            <input type="text" id="address" name="address" placeholder="Adresse" [(ngModel)]="profileData.address"
+                required>
+        </div>
+        <div class="group-input">
+            <label for="Tel">Numéro de téléphone <span class="required">*</span></label>
+            <input type="text" id="Tel" name="Tel" placeholder="Ex : +216 ** *** ***" [(ngModel)]="profileData.phone"
+                required>
+        </div>
+        <div class="group-input">
+            <label for="speciality">Spécialité <span class="required">*</span></label>
+            <select id="speciality" name="speciality" [(ngModel)]="profileData.speciality" (change)="checkSpeciality()"
+                required>
+                <option value="" disabled selected>Sélectionnez une spécialité</option>
+                <option *ngFor="let speciality of specialities" [value]="speciality">{{speciality}}</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+        <div *ngIf="profileData.speciality === 'autre'" class="group-input">
+            <label for="autreSpeciality">Autre spécialité <span class="required">*</span></label>
+            <input type="text" id="autreSpeciality" name="autreSpeciality" placeholder="Veuillez entrer la spécialité"
+                [(ngModel)]="profileData.customSpeciality" required>
+        </div>
+        <button [disabled]="loading" (click)="registerUserAndProfile()">
+            <div *ngIf="loading" role="status" aria-label="loading">
+                <span>Loading...</span>
+            </div>
+            <p *ngIf="!loading">{{btnDynamicName}}</p>
+        </button>
+    </div>
+</div>
+
+
+
+
+<!-- <span class="flex gap-2">Vous avez un compte?
+            <p (click)="loginPage()">S'identifier</p>
+        </span>
+    </div>
+    <div *ngIf="login" class="wrapper-form">
+    <div class="group-input">
+        <input type="text" name="email" placeholder="Adresse e-mail" [(ngModel)]="dsLogin.email">
+    </div>
+    <div class="group-input">
+        <input type="password" name="password" placeholder="Mot de passe" [(ngModel)]="dsLogin.password">
+    </div>
+
+    <span class="flex gap-2">Vous n'avez pas de compte?
+        <p (click)="inscriptionPage()">Créer un compte</p>
+    </span>
+</div>-->
