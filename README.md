@@ -1,3 +1,25 @@
+# 💊 eMedCare – Frontend de la plateforme de téléconsultation
+
+Ce dépôt contient le frontend de **eMedCare**, une plateforme de téléconsultation médicale moderne et intuitive qui permet aux patients de consulter des médecins à distance, de planifier des rendez-vous, et de gérer leur suivi médical depuis une interface simple.
+
+---
+
+## 🌐 Technologies utilisées
+
+- **Framework** : [Angular](https://angular.io/)
+- **Langage** : TypeScript
+- **Style** : HTML, CSS
+- **API de communication** : HTTP Client Angular (avec Token JWT)
+---
+
+## 🧠 Fonctionnalités principales
+
+- 🔐 Authentification (connexion pour médecins, patients, administrateurs)
+- 👤 Inscription des utilisateurs avec formulaire dynamique
+- 📅 Prise de rendez-vous avec sélection des créneaux disponibles
+- 📂 Consultation des spécialités médicale
+
+---
 # Frontendpfa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
